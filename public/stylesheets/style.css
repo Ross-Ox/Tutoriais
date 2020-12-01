@@ -1,8 +1,97 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header,
+footer,
+nav {
+    grid-column: 1/4;
+    display: flex;
+    background-color: rgb(70, 17, 17);
+    align-items: center;
+}
+
+header {
+    grid-area: header;
+}
+
+#headerText {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#studentPic {
+    width: 200px;
+    padding: 20px;
+}
+
+#nav {
+    font-size: 20px;
+    line-height: 50px;
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#footer {
+    grid-area: footer;
+    padding: 10px;
+    padding-left: 200px;
+}
+
+main h1,
+h2 {
+    color: rgb(70, 17, 17)
+}
+
+main {
+    grid-area: main;
+    color: #333333;
+}
+
+#related {
+    font-size: 20px;
+    line-height: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    border: rgb(70, 17, 17);
+    border-style: solid;
+}
+
+#related a:link {
+    color: rgb(70, 17, 17);
+}
+
+#related a:visited {
+    color: rgb(70, 17, 17);
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "header header header" "nav main rel" "footer footer footer";
+    grid-template-columns: 20% 60% 20%;
+}
+
+nav a:link {
+    color: white;
+}
+
+nav a:visited {
+    color: white
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
